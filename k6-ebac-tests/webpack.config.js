@@ -4,7 +4,8 @@ const path = require('path');
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: {
-    login: './simulations/user.test.js'
+    login: './simulations/user.test.js',
+    product: './simulations/product.test.js'
    
   },
   output: {

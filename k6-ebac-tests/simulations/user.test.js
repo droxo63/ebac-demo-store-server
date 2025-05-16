@@ -13,7 +13,12 @@ export default function () {
   });
 
   group("List users", () => {
-    user.list(login.getToken());
+    const token = login.getToken();
+    if (token) {
+      user.list(token);
+    } else {
+      console.error("Erro: Token inválido. Login falhou.");
+    }
   });
 
   sleep(1);

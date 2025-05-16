@@ -4,7 +4,8 @@
   "description": "Projeto de testes de performance de apis usando k6",
   "main": "index.js",
   "scripts": {
-    "test": "k6 run simulations/user.test.js"
+    "pretest": "webpack",
+    "test": "k6 run simulations/product.test.js"
   },
   "author": "Diego",
   "license": "ISC",
@@ -12,10 +13,10 @@
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.1",
     "babel-loader": "^10.0.0",
-    "core-js": "^3.42.0",
-    "dotenv": "^16.5.0",
-    "k6": "^0.0.0",
     "webpack": "^5.99.7",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "core-js": "^3.42.0"
   }
 }
